@@ -1,0 +1,26 @@
+function enterUniverse() {
+
+    const home = document.querySelector(".container");
+    const second = document.getElementById("secondPage");
+
+    home.style.display = "none";
+
+    second.style.display = "flex";
+
+    setTimeout(() => {
+        second.classList.add("active");
+    }, 50);
+}
+
+function goBack() {
+
+    const home = document.querySelector(".container");
+    const second = document.getElementById("secondPage");
+
+    second.classList.remove("active");
+
+    setTimeout(() => {
+        second.style.display = "none";
+        home.style.display = "flex";
+    }, 1000);
+}
