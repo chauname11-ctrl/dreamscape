@@ -309,18 +309,45 @@ button:active {
             0 0 30px #c9aaff,
             0 0 60px #927ac5;
     }
-}
-.music-player {
-    margin-top: 20px;
-    text-align: center;
+
+.music-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin: 20px auto;
+    width: 300px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
 }
 
-.music-player p {
-    margin-bottom: 10px;
-    color: white;
+.album {
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-audio {
-    width: 250px;
-    max-width: 100%;
+.music-info {
+    text-align: left;
+    flex: 1;
+}
+
+.music-info h3 {
+    font-size: 16px;
+}
+
+.music-info p {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+#playBtn {
+    margin-top: 8px;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 }
