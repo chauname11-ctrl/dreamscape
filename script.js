@@ -7,6 +7,8 @@ function enterUniverse() {
 
     second.style.display = "flex";
 
+    window.scrollTo(0, 0);
+
     setTimeout(() => {
         second.classList.add("active");
     }, 50);
@@ -22,5 +24,6 @@ function goBack() {
     setTimeout(() => {
         second.style.display = "none";
         home.style.display = "flex";
+        window.scrollTo(0, 0);
     }, 1000);
 }
