@@ -27,3 +27,20 @@ function goBack() {
         window.scrollTo(0, 0);
     }, 1000);
 }
+
+const song = document.getElementById("song");
+const btn = document.getElementById("playBtn");
+
+function playSong() {
+    if (song.paused) {
+        song.play();
+        btn.innerHTML = "⏸";
+    } else {
+        song.pause();
+        btn.innerHTML = "▶";
+    }
+}
+
+song.onended = function() {
+    btn.innerHTML = "▶";
+};
