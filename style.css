@@ -262,3 +262,51 @@ button:active {
         text-shadow: 0 0 25px #d9baff;
     }
 }
+
+/* DREAM PHOTO */
+
+.dream-photo {
+    width: min(300px, 85vw);
+    height: auto;
+
+    margin-top: 30px;
+
+    border-radius: 20px;
+    border: 1px solid rgba(220, 200, 255, 0.5);
+
+    box-shadow:
+        0 0 20px #a88aff,
+        0 0 45px rgba(168, 138, 255, 0.5);
+
+    opacity: 0;
+}
+
+.second-page.active .dream-photo {
+    animation:
+        photoReveal 1.5s ease forwards,
+        photoGlow 3s ease-in-out 1.5s infinite alternate;
+}
+
+@keyframes photoReveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes photoGlow {
+    from {
+        box-shadow: 0 0 15px #a88aff;
+    }
+
+    to {
+        box-shadow:
+            0 0 30px #c9aaff,
+            0 0 60px #927ac5;
+    }
+}
