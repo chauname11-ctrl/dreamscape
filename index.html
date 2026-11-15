@@ -45,13 +45,22 @@
 
     <img src="foto.jpg" class="dream-photo" alt="Dreamscape">
     
-    <div class="music-player">
-    <p>🎵 A song for you</p>
+    <div class="music-card">
 
-    <audio controls>
-        <source src="nightchanges.mp3" type="audio/mpeg">
-        Browser kamu tidak mendukung audio.
-    </audio>
+    <img src="cover.jpg" class="album">
+
+    <div class="music-info">
+        <h3>Perfect</h3>
+        <p>Ed Sheeran</p>
+
+        <audio id="song" src="nightchanges.mp3"></audio>
+
+        <button onclick="playSong()" id="playBtn">
+            ▶
+        </button>
+    </div>
+
+</div>
 
     </div>
     <p class="second-text">
