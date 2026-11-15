@@ -1,46 +1,39 @@
+
 function enterUniverse() {
+document.querySelector(".container").style.display = "none";
 
-    const home = document.querySelector(".container");
-    const second = document.getElementById("secondPage");
+const page = document.getElementById("secondPage");
 
-    home.style.display = "none";
+page.style.display = "flex";
 
-    second.style.display = "flex";
+setTimeout(() => {
+    page.classList.add("active");
+}, 50);
 
-    window.scrollTo(0, 0);
-
-    setTimeout(() => {
-        second.classList.add("active");
-    }, 50);
 }
 
 function goBack() {
+const page = document.getElementById("secondPage");
 
-    const home = document.querySelector(".container");
-    const second = document.getElementById("secondPage");
+page.classList.remove("active");
 
-    second.classList.remove("active");
+setTimeout(() => {
+    page.style.display = "none";
+    document.querySelector(".container").style.display = "flex";
+}, 1000);
 
-    setTimeout(() => {
-        second.style.display = "none";
-        home.style.display = "flex";
-        window.scrollTo(0, 0);
-    }, 1000);
 }
 
+function playSong() {
 const song = document.getElementById("song");
 const btn = document.getElementById("playBtn");
 
-function playSong() {
-    if (song.paused) {
-        song.play();
-        btn.innerHTML = "⏸";
-    } else {
-        song.pause();
-        btn.innerHTML = "▶";
-    }
+if (song.paused) {
+    song.play();
+    btn.textContent = "⏸";
+} else {
+    song.pause();
+    btn.textContent = "▶";
 }
 
-song.onended = function() {
-    btn.innerHTML = "▶";
-};
+}
