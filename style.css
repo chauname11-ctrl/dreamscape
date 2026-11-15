@@ -24,22 +24,28 @@ body {
 .stars {
     position: fixed;
     inset: 0;
+
     background-image:
         radial-gradient(2px 2px at 20% 30%, white, transparent),
         radial-gradient(2px 2px at 70% 20%, white, transparent),
         radial-gradient(2px 2px at 40% 80%, white, transparent),
         radial-gradient(2px 2px at 85% 65%, white, transparent),
         radial-gradient(2px 2px at 15% 75%, white, transparent);
+
     background-size: 250px 250px;
-    animation: twinkle 4s infinite alternate;
+
+    animation:
+        twinkle 4s infinite alternate,
+        starDrift 60s linear infinite;
 }
 
-@keyframes twinkle {
+@keyframes starDrift {
     from {
-        opacity: 0.3;
+        background-position: 0 0;
     }
+
     to {
-        opacity: 1;
+        background-position: 250px 250px;
     }
 }
 
