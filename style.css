@@ -8,15 +8,16 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+
     background: linear-gradient(
         135deg,
         #090b20,
         #242044,
         #66557f
     );
+
     color: white;
     font-family: sans-serif;
-    overflow: hidden;
 }
 
 /* STAR BACKGROUND */
@@ -309,6 +310,7 @@ button:active {
             0 0 30px #c9aaff,
             0 0 60px #927ac5;
     }
+}
 
 .music-card {
     display: flex;
@@ -351,3 +353,8 @@ button:active {
     height: 35px;
     cursor: pointer;
 }
+
+.music-card {
+    max-width: 90%;
+}
+
