@@ -1,3 +1,4 @@
+alert("JavaScript berhasil terbaca!");
 
 function enterUniverse() {
 document.querySelector(".container").style.display = "none";
