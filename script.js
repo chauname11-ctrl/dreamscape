@@ -23,17 +23,25 @@ setTimeout(() => {
 }, 1000);
 
 }
+async function playSong() {
+    const song = document.getElementById("song");
+    const btn = document.getElementById("playBtn");
 
-function playSong() {
-const song = document.getElementById("song");
-const btn = document.getElementById("playBtn");
-
-if (song.paused) {
-    song.play();
-    btn.textContent = "⏸";
-} else {
-    song.pause();
-    btn.textContent = "▶";
+    if (song.paused) {
+        try {
+            await song.play();
+            btn.textContent = "⏸";
+        } catch (error) {
+            console.log("Gagal memutar musik:", error);
+            btn.textContent = "▶";
+        }
+    } else {
+        song.pause();
+        btn.textContent = "▶";
+    }
 }
 
-}
+document.getElementById("song").addEventListener("ended", function() {
+    document.getElementById("playBtn").textContent = "▶";
+});
+
